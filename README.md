@@ -8,7 +8,7 @@ Module:   gym_member
 Version:  2.1
 Author:   AMS Logic
 License:  LGPL-3 (GNU Lesser General Public License v3)
-Website:  https://www.amslogic.com
+
 
 -------------------------------------------------------------------------------
 DESCRIPTION
