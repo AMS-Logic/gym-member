@@ -1,0 +1,122 @@
+<!--
+    Copyright (C) 2026 AMS Logic
+    License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
+-->
+<odoo>
+    <record id="view_gym_membership_tree" model="ir.ui.view">
+        <field name="name">gym.membership.tree</field>
+        <field name="model">gym.membership</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="phone"/>
+                <field name="email"/>
+                <field name="membership_type"/>
+                <field name="start_date"/>
+                <field name="end_date"/>
+                <field name="active" widget="boolean_toggle"/>
+                <field name="is_active" widget="boolean_toggle"/>
+            </list>
+        </field>
+    </record>
+    <record id="view_gym_membership_form" model="ir.ui.view">
+        <field name="name">gym.membership.form</field>
+        <field name="model">gym.membership</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_toggle_active" type="object"
+                                class="oe_stat_button"
+                                icon="fa-heart"
+                                invisible="not is_active">
+                            <div class="o_stat_info">
+                                <field name="is_active" widget="boolean_toggle"/>
+                                <span class="o_stat_text">Active Member</span>
+                            </div>
+                        </button>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="email" widget="email"/>
+                            <field name="phone" widget="phone"/>
+                        </group>
+                        <group>
+                            <field name="membership_type"/>
+                            <field name="start_date"/>
+                            <field name="end_date"/>
+                            <field name="active"/>
+                            <field name="is_active"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Notes">
+                            <field name="notes" nolabel="1"/>
+                        </page>
+                        <page string="Payment History">
+                            <field name="payment_ids">
+                                <list string="Payments">
+                                    <field name="payment_reference"/>
+                                    <field name="payment_date"/>
+                                    <field name="amount"/>
+                                    <field name="payment_method"/>
+                                    <field name="state" widget="badge"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="view_gym_membership_search" model="ir.ui.view">
+        <field name="name">gym.membership.search</field>
+        <field name="model">gym.membership</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="phone"/>
+                <field name="email"/>
+                <field name="membership_type"/>
+                <filter name="active" string="Active Members" domain="[('is_active','=',True)]"/>
+                <filter name="inactive" string="Inactive Members" domain="[('is_active','=',False)]"/>
+                <filter name="membership_basic" string="Basic" domain="[('membership_type','=','basic')]"/>
+                <filter name="membership_standard" string="Standard" domain="[('membership_type','=','standard')]"/>
+                <filter name="membership_premium" string="Premium" domain="[('membership_type','=','premium')]"/>
+            </search>
+        </field>
+    </record>
+    <record id="view_gym_membership_pivot" model="ir.ui.view">
+        <field name="name">gym.membership.pivot</field>
+        <field name="model">gym.membership</field>
+        <field name="arch" type="xml">
+            <pivot>
+                <field name="membership_type" type="row"/>
+                <field name="is_active" type="col"/>
+                <field name="id" type="measure" operator="count"/>
+            </pivot>
+        </field>
+    </record>
+    <record id="view_gym_membership_graph" model="ir.ui.view">
+        <field name="name">gym.membership.graph</field>
+        <field name="model">gym.membership</field>
+        <field name="arch" type="xml">
+            <graph string="Membership Distribution">
+                <field name="membership_type" type="row"/>
+                <field name="is_active" type="col"/>
+                <field name="id" type="measure" operator="count"/>
+            </graph>
+        </field>
+    </record>
+    <record id="action_gym_membership" model="ir.actions.act_window">
+        <field name="name">Gym Members</field>
+        <field name="res_model">gym.membership</field>
+        <field name="view_mode">list,form,pivot,graph</field>
+        <field name="search_view_id" ref="view_gym_membership_search"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">Add your first gym member!</p>
+            <p>Manage gym memberships, track member information, and monitor membership status and payments.</p>
+        </field>
+    </record>
+</odoo>

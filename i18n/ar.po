@@ -1,0 +1,643 @@
+# Copyright (C) 2026 AMS Logic
+# License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
+#
+# Arabic translations for Gym Member Enterprise
+# Copyright (C) 2026
+# This file is distributed under the same license as the gym_member module.
+msgid ""
+msgstr ""
+"Project-Id-Version: Gym Member Enterprise 2.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-07-05 10:00+0000\n"
+"PO-Revision-Date: 2026-07-05 10:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: Arabic\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+
+#. module: gym_member
+#: model:ir.model,name:gym_member.model_gym_attendance
+msgid "Gym Attendance"
+msgstr "حضور الصالة الرياضية"
+
+#. module: gym_member
+#: model:ir.model,name:gym_member.model_gym_class
+msgid "Gym Class"
+msgstr "حصة رياضية"
+
+#. module: gym_member
+#: model:ir.model,name:gym_member.model_gym_membership
+msgid "Gym Membership"
+msgstr "عضوية الصالة الرياضية"
+
+#. module: gym_member
+#: model:ir.model,name:gym_member.model_gym_notification
+msgid "Gym Notification"
+msgstr "إشعار الصالة"
+
+#. module: gym_member
+#: model:ir.model,name:gym_member.model_gym_payment
+msgid "Gym Payment"
+msgstr "دفع الصالة"
+
+#. module: gym_member
+#: model:ir.model,name:gym_member.model_member_export_wizard
+msgid "Member Export Wizard"
+msgstr "معالج تصدير الأعضاء"
+
+#. module: gym_member
+#: model:ir.model,name:gym_member.model_bulk_email_wizard
+msgid "Bulk Email Wizard"
+msgstr "معالج إرسال البريد الإلكتروني الجماعي"
+
+#. module: gym_member
+#: model:ir.model.fields,field_description:gym_member.field_gym_attendance__member_id
+msgid "Member"
+msgstr "عضو"
+
+#. module: gym_member
+#: model:ir.model.fields,field_description:gym_member.field_gym_attendance__member_name
+msgid "Member Name"
+msgstr "اسم العضو"
+
+#. module: gym_member
+#: model:ir.model.fields,field_description:gym_member.field_gym_attendance__check_in
+msgid "Check In"
+msgstr "تسجيل الدخول"
+
+#. module: gym_member
+#: model:ir.model.fields,field_description:gym_member.field_gym_attendance__check_out
+msgid "Check Out"
+msgstr "تسجيل الخروج"
+
+#. module: gym_member
+#: model:ir.model.fields,field_description:gym_member.field_gym_attendance__duration
+msgid "Duration (hours)"
+msgstr "المدة (ساعات)"
+
+#. module: gym_member
+#: model:ir.model.fields,field_description:gym_member.field_gym_attendance__location
+msgid "Location"
+msgstr "الموقع"
+
+#. module: gym_member
+#: model:ir.model.fields,field_description:gym_member.field_gym_attendance__notes
+msgid "Notes"
+msgstr "ملاحظات"
+
+#. module: gym_member
+#: model:ir.model.fields.selection,selection:gym_member.field_gym_attendance__location
+msgid "Main Gym"
+msgstr "الصالة الرئيسية"
+
+#. module: gym_member
+#: model:ir.model.fields.selection,selection:gym_member.field_gym_attendance__location
+msgid "Studio"
+msgstr "استوديو"
+
+#. module: gym_member
+#: model:ir.model.fields.selection,selection:gym_member.field_gym_attendance__location
+msgid "Pool"
+msgstr "مسبح"
+
+#. module: gym_member
+#: model:ir.model.fields.selection,selection:gym_member.field_gym_attendance__location
+msgid "Cardio Area"
+msgstr "منطقة الكارديو"
+
+#. module: gym_member
+#: model:ir.model.fields,field_description:gym_member.field_gym_class__name
+msgid "Class Name"
+msgstr "اسم الحصة"
+
+#. module: gym_member
+#: model:ir.model.fields,field_description:gym_member.field_gym_class__description
+msgid "Description"
+msgstr "الوصف"
+
+#. module: gym_member
+#: model:ir.model.fields,field_description:gym_member.field_gym_class__instructor
+msgid "Instructor"
+msgstr "المدرب"
+
+#. module: gym_member
+#: model:ir.model.fields,field_description:gym_member.field_gym_class__capacity
+msgid "Maximum Capacity"
+msgstr "السعة القصوى"
+
+#. module: gym_member
+#: model:ir.model.fields,field_description:gym_member.field_gym_class__enrolled_count
+msgid "Enrolled"
+msgstr "المسجلين"
+
+#. module: gym_member
+#: model:ir.model.fields,field_description:gym_member.field_gym_class__available_spots
+msgid "Available Spots"
+msgstr "الأماكن المتاحة"
+
+#. module: gym_member
+#: model:ir.model.fields,field_description:gym_member.field_gym_class__class_type
+msgid "Class Type"
+msgstr "نوع الحصة"
+
+#. module: gym_member
+#: model:ir.model.fields,field_description:gym_member.field_gym_class__schedule
+msgid "Schedule"
+msgstr "الجدول"
+
+#. module: gym_member
+#: model:ir.model.fields,field_description:gym_member.field_gym_class__days_of_week
+msgid "Day of Week"
+msgstr "يوم الأسبوع"
+
+#. module: gym_member
+#: model:ir.model.fields,field_description:gym_member.field_gym_class__start_time
+msgid "Start Time (Hour)"
+msgstr "وقت البدء"
+
+#. module: gym_member
+#: model:ir.model.fields,field_description:gym_member.field_gym_class__duration
+msgid "Duration (hours)"
+msgstr "المدة (ساعات)"
+
+#. module: gym_member
+#: model:ir.model.fields,field_description:gym_member.field_gym_class__active
+msgid "Active"
+msgstr "نشط"
+
+#. module: gym_member
+#: model:ir.model.fields,field_description:gym_member.field_gym_class__member_ids
+msgid "Enrolled Members"
+msgstr "الأعضاء المسجلين"
+
+#. module: gym_member
+#: model:ir.model.fields.selection,selection:gym_member.field_gym_class__class_type
+msgid "Yoga"
+msgstr "يوجا"
+
+#. module: gym_member
+#: model:ir.model.fields.selection,selection:gym_member.field_gym_class__class_type
+msgid "Pilates"
+msgstr "بيلاتس"
+
+#. module: gym_member
+#: model:ir.model.fields.selection,selection:gym_member.field_gym_class__class_type
+msgid "Spinning"
+msgstr "سبايننغ"
+
+#. module: gym_member
+#: model:ir.model.fields.selection,selection:gym_member.field_gym_class__class_type
+msgid "Zumba"
+msgstr "زومبا"
+
+#. module: gym_member
+#: model:ir.model.fields.selection,selection:gym_member.field_gym_class__class_type
+msgid "HIIT"
+msgstr "HIIT"
+
+#. module: gym_member
+#: model:ir.model.fields.selection,selection:gym_member.field_gym_class__class_type
+msgid "Boxing"
+msgstr "ملاكمة"
+
+#. module: gym_member
+#: model:ir.model.fields.selection,selection:gym_member.field_gym_class__schedule
+msgid "Morning (6-9 AM)"
+msgstr "صباحًا (6-9 صباحًا)"
+
+#. module: gym_member
+#: model:ir.model.fields.selection,selection:gym_member.field_gym_class__schedule
+msgid "Midday (10 AM-2 PM)"
+msgstr "ظهرًا (10 صباحًا - 2 ظهرًا)"
+
+#. module: gym_member
+#: model:ir.model.fields.selection,selection:gym_member.field_gym_class__schedule
+msgid "Evening (4-8 PM)"
+msgstr "مساءً (4 - 8 مساءً)"
+
+#. module: gym_member
+#: model:ir.model.fields.selection,selection:gym_member.field_gym_class__days_of_week
+msgid "Monday"
+msgstr "الاثنين"
+
+#. module: gym_member
+#: model:ir.model.fields.selection,selection:gym_member.field_gym_class__days_of_week
+msgid "Tuesday"
+msgstr "الثلاثاء"
+
+#. module: gym_member
+#: model:ir.model.fields.selection,selection:gym_member.field_gym_class__days_of_week
+msgid "Wednesday"
+msgstr "الأربعاء"
+
+#. module: gym_member
+#: model:ir.model.fields.selection,selection:gym_member.field_gym_class__days_of_week
+msgid "Thursday"
+msgstr "الخميس"
+
+#. module: gym_member
+#: model:ir.model.fields.selection,selection:gym_member.field_gym_class__days_of_week
+msgid "Friday"
+msgstr "الجمعة"
+
+#. module: gym_member
+#: model:ir.model.fields.selection,selection:gym_member.field_gym_class__days_of_week
+msgid "Saturday"
+msgstr "السبت"
+
+#. module: gym_member
+#: model:ir.model.fields.selection,selection:gym_member.field_gym_class__days_of_week
+msgid "Sunday"
+msgstr "الأحد"
+
+#. module: gym_member
+#: model:ir.model.fields,field_description:gym_member.field_gym_membership__name
+msgid "Member Name"
+msgstr "اسم العضو"
+
+#. module: gym_member
+#: model:ir.model.fields,field_description:gym_member.field_gym_membership__phone
+msgid "Phone"
+msgstr "الهاتف"
+
+#. module: gym_member
+#: model:ir.model.fields,field_description:gym_member.field_gym_membership__start_date
+msgid "Start Date"
+msgstr "تاريخ البدء"
+
+#. module: gym_member
+#: model:ir.model.fields,field_description:gym_member.field_gym_membership__end_date
+msgid "End Date"
+msgstr "تاريخ الانتهاء"
+
+#. module: gym_member
+#: model:ir.model.fields,field_description:gym_member.field_gym_membership__email
+msgid "Email"
+msgstr "البريد الإلكتروني"
+
+#. module: gym_member
+#: model:ir.model.fields,field_description:gym_member.field_gym_membership__membership_type
+msgid "Membership Type"
+msgstr "نوع العضوية"
+
+#. module: gym_member
+#: model:ir.model.fields,field_description:gym_member.field_gym_membership__active
+msgid "Active"
+msgstr "نشط"
+
+#. module: gym_member
+#: model:ir.model.fields,field_description:gym_member.field_gym_membership__is_active
+msgid "Is Active?"
+msgstr "هل هو نشط؟"
+
+#. module: gym_member
+#: model:ir.model.fields,field_description:gym_member.field_gym_membership__payment_ids
+msgid "Payments"
+msgstr "المدفوعات"
+
+#. module: gym_member
+#: model:ir.model.fields.selection,selection:gym_member.field_gym_membership__membership_type
+msgid "Basic"
+msgstr "أساسي"
+
+#. module: gym_member
+#: model:ir.model.fields.selection,selection:gym_member.field_gym_membership__membership_type
+msgid "Standard"
+msgstr "قياسي"
+
+#. module: gym_member
+#: model:ir.model.fields.selection,selection:gym_member.field_gym_membership__membership_type
+msgid "Premium"
+msgstr "ممتاز"
+
+#. module: gym_member
+#: model:ir.model.fields,field_description:gym_member.field_gym_notification__subject
+msgid "Subject"
+msgstr "الموضوع"
+
+#. module: gym_member
+#: model:ir.model.fields,field_description:gym_member.field_gym_notification__body
+msgid "Body"
+msgstr "المحتوى"
+
+#. module: gym_member
+#: model:ir.model.fields,field_description:gym_member.field_gym_notification__notification_type
+msgid "Type"
+msgstr "النوع"
+
+#. module: gym_member
+#: model:ir.model.fields,field_description:gym_member.field_gym_notification__recipient_ids
+msgid "Recipients"
+msgstr "المستلمون"
+
+#. module: gym_member
+#: model:ir.model.fields,field_description:gym_member.field_gym_notification__send_date
+msgid "Send Date"
+msgstr "تاريخ الإرسال"
+
+#. module: gym_member
+#: model:ir.model.fields,field_description:gym_member.field_gym_notification__sent
+msgid "Sent"
+msgstr "مرسل"
+
+#. module: gym_member
+#: model:ir.model.fields.selection,selection:gym_member.field_gym_notification__notification_type
+msgid "Membership Expiring"
+msgstr "انتهاء العضوية وشيك"
+
+#. module: gym_member
+#: model:ir.model.fields.selection,selection:gym_member.field_gym_notification__notification_type
+msgid "Membership Expired"
+msgstr "انتهت العضوية"
+
+#. module: gym_member
+#: model:ir.model.fields.selection,selection:gym_member.field_gym_notification__notification_type
+msgid "Payment Due"
+msgstr "دفع مستحق"
+
+#. module: gym_member
+#: model:ir.model.fields.selection,selection:gym_member.field_gym_notification__notification_type
+msgid "Promotion"
+msgstr "عرض ترويجي"
+
+#. module: gym_member
+#: model:ir.model.fields.selection,selection:gym_member.field_gym_notification__notification_type
+msgid "Announcement"
+msgstr "إعلان"
+
+#. module: gym_member
+#: model:ir.model.fields.selection,selection:gym_member.field_gym_notification__notification_type
+msgid "Class Reminder"
+msgstr "تذكير بحصة"
+
+#. module: gym_member
+#: model:ir.model.fields,field_description:gym_member.field_gym_payment__payment_reference
+msgid "Reference"
+msgstr "المرجع"
+
+#. module: gym_member
+#: model:ir.model.fields,field_description:gym_member.field_gym_payment__membership_id
+msgid "Member"
+msgstr "عضو"
+
+#. module: gym_member
+#: model:ir.model.fields,field_description:gym_member.field_gym_payment__member_name
+msgid "Member Name"
+msgstr "اسم العضو"
+
+#. module: gym_member
+#: model:ir.model.fields,field_description:gym_member.field_gym_payment__amount
+msgid "Amount"
+msgstr "المبلغ"
+
+#. module: gym_member
+#: model:ir.model.fields,field_description:gym_member.field_gym_payment__payment_date
+msgid "Payment Date"
+msgstr "تاريخ الدفع"
+
+#. module: gym_member
+#: model:ir.model.fields,field_description:gym_member.field_gym_payment__payment_method
+msgid "Payment Method"
+msgstr "طريقة الدفع"
+
+#. module: gym_member
+#: model:ir.model.fields,field_description:gym_member.field_gym_payment__state
+msgid "Status"
+msgstr "الحالة"
+
+#. module: gym_member
+#: model:ir.model.fields.selection,selection:gym_member.field_gym_payment__payment_method
+msgid "Cash"
+msgstr "نقدي"
+
+#. module: gym_member
+#: model:ir.model.fields.selection,selection:gym_member.field_gym_payment__payment_method
+msgid "Credit Card"
+msgstr "بطاقة ائتمان"
+
+#. module: gym_member
+#: model:ir.model.fields.selection,selection:gym_member.field_gym_payment__payment_method
+msgid "Bank Transfer"
+msgstr "تحويل بنكي"
+
+#. module: gym_member
+#: model:ir.model.fields.selection,selection:gym_member.field_gym_payment__state
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: gym_member
+#: model:ir.model.fields.selection,selection:gym_member.field_gym_payment__state
+msgid "Confirmed"
+msgstr "مؤكد"
+
+#. module: gym_member
+#: model:ir.model.fields.selection,selection:gym_member.field_gym_payment__state
+msgid "Cancelled"
+msgstr "ملغى"
+
+#. module: gym_member
+#: model:ir.model.fields,field_description:gym_member.field_gym_membership__notes
+msgid "Notes"
+msgstr "ملاحظات"
+
+#. module: gym_member
+#: model:ir.model.fields,field_description:gym_member.field_bulk_email_wizard__subject
+msgid "Subject"
+msgstr "الموضوع"
+
+#. module: gym_member
+#: model:ir.model.fields,field_description:gym_member.field_bulk_email_wizard__body
+msgid "Body"
+msgstr "المحتوى"
+
+#. module: gym_member
+#: model:ir.model.fields,field_description:gym_member.field_bulk_email_wizard__recipient_filter
+msgid "Recipients"
+msgstr "المستلمون"
+
+#. module: gym_member
+#: model:ir.model.fields,field_description:gym_member.field_bulk_email_wizard__membership_type_filter
+msgid "Membership Type"
+msgstr "نوع العضوية"
+
+#. module: gym_member
+#: model:ir.model.fields.selection,selection:gym_member.field_bulk_email_wizard__recipient_filter
+msgid "All Members"
+msgstr "جميع الأعضاء"
+
+#. module: gym_member
+#: model:ir.model.fields.selection,selection:gym_member.field_bulk_email_wizard__recipient_filter
+msgid "Active Members Only"
+msgstr "الأعضاء النشطون فقط"
+
+#. module: gym_member
+#: model:ir.model.fields.selection,selection:gym_member.field_bulk_email_wizard__recipient_filter
+msgid "Inactive Members Only"
+msgstr "الأعضاء غير النشطين فقط"
+
+#. module: gym_member
+#: model:ir.model.fields,field_description:gym_member.field_member_export_wizard__export_format
+msgid "Export Format"
+msgstr "صيغة التصدير"
+
+#. module: gym_member
+#: model:ir.model.fields,field_description:gym_member.field_member_export_wizard__include_inactive
+msgid "Include Inactive Members"
+msgstr "تضمين الأعضاء غير النشطين"
+
+#. module: gym_member
+#: model:ir.model.fields.selection,selection:gym_member.field_member_export_wizard__export_format
+msgid "CSV"
+msgstr "CSV"
+
+#. module: gym_member
+#: model:ir.model.fields.selection,selection:gym_member.field_member_export_wizard__export_format
+msgid "JSON"
+msgstr "JSON"
+
+#. module: gym_member
+#: model:ir.actions.act_window,name:gym_member.action_gym_membership
+msgid "Gym Members"
+msgstr "أعضاء الصالة الرياضية"
+
+#. module: gym_member
+#: model:ir.actions.act_window,name:gym_member.action_gym_payment
+msgid "Payments"
+msgstr "المدفوعات"
+
+#. module: gym_member
+#: model:ir.actions.act_window,name:gym_member.action_gym_attendance
+msgid "Attendance Logs"
+msgstr "سجلات الحضور"
+
+#. module: gym_member
+#: model:ir.actions.act_window,name:gym_member.action_gym_class
+msgid "Gym Classes"
+msgstr "حصص الصالة الرياضية"
+
+#. module: gym_member
+#: model:ir.actions.act_window,name:gym_member.action_member_report
+msgid "Member Report"
+msgstr "تقرير الأعضاء"
+
+#. module: gym_member
+#: model:ir.actions.act_window,name:gym_member.action_payment_report
+msgid "Payment Report"
+msgstr "تقرير المدفوعات"
+
+#. module: gym_member
+#: model:ir.ui.menu,name:gym_member.menu_gym_root
+msgid "Gym Management"
+msgstr "إدارة الصالة الرياضية"
+
+#. module: gym_member
+#: model:ir.ui.menu,name:gym_member.menu_gym_dashboard
+msgid "Dashboard"
+msgstr "لوحة القيادة"
+
+#. module: gym_member
+#: model:ir.ui.menu,name:gym_member.menu_gym_members_operations
+msgid "Members"
+msgstr "الأعضاء"
+
+#. module: gym_member
+#: model:ir.ui.menu,name:gym_member.menu_gym_membership
+msgid "All Members"
+msgstr "جميع الأعضاء"
+
+#. module: gym_member
+#: model:ir.ui.menu,name:gym_member.menu_gym_attendance
+msgid "Attendance Logs"
+msgstr "سجلات الحضور"
+
+#. module: gym_member
+#: model:ir.ui.menu,name:gym_member.menu_gym_class
+msgid "Gym Classes"
+msgstr "حصص الصالة الرياضية"
+
+#. module: gym_member
+#: model:ir.ui.menu,name:gym_member.menu_gym_financial
+msgid "Financial"
+msgstr "المالية"
+
+#. module: gym_member
+#: model:ir.ui.menu,name:gym_member.menu_gym_payment
+msgid "Payments"
+msgstr "المدفوعات"
+
+#. module: gym_member
+#: model:ir.ui.menu,name:gym_member.menu_gym_reports
+msgid "Reports"
+msgstr "التقارير"
+
+#. module: gym_member
+#: model:ir.ui.menu,name:gym_member.menu_gym_member_report
+msgid "Member Reports"
+msgstr "تقارير الأعضاء"
+
+#. module: gym_member
+#: model:ir.ui.menu,name:gym_member.menu_gym_payment_report
+msgid "Payment Reports"
+msgstr "تقارير المدفوعات"
+
+#. module: gym_member
+#: model:ir.ui.menu,name:gym_member.menu_gym_configuration
+msgid "Configuration"
+msgstr "الإعدادات"
+
+#. module: gym_member
+#: model:ir.actions.act_window,help:gym_member.action_gym_membership
+msgid "Manage gym memberships, track member information, and monitor membership status and payments."
+msgstr "إدارة عضوية الصالة الرياضية، تتبع معلومات الأعضاء ومراقبة حالة العضوية والمدفوعات."
+
+#. module: gym_member
+#: model:ir.actions.act_window,help:gym_member.action_gym_payment
+msgid "Track all membership payments, view payment history, and manage financial records."
+msgstr "تتبع جميع مدفوعات العضوية، عرض تاريخ المدفوعات وإدارة السجلات المالية."
+
+#. module: gym_member
+#: model:ir.actions.act_window,help:gym_member.action_gym_attendance
+msgid "Track member check-ins and check-outs to monitor facility usage."
+msgstr "تتبع تسجيلات الدخول والخروج للأعضاء لمراقبة استخدام المنشأة."
+
+#. module: gym_member
+#: model:ir.actions.act_window,help:gym_member.action_gym_class
+msgid "Manage fitness classes, track enrollments, and monitor class capacity."
+msgstr "إدارة حصص اللياقة، تتبع التسجيلات ومراقبة سعة الحصص."
+
+#. module: gym_member
+#: model:ir.actions.act_window,help:gym_member.action_member_report
+msgid "Generate and print member reports."
+msgstr "إنشاء وطباعة تقارير الأعضاء."
+
+#. module: gym_member
+#: model:ir.actions.act_window,help:gym_member.action_payment_report
+msgid "Generate and print payment reports."
+msgstr "إنشاء وطباعة تقارير المدفوعات."
+
+#. module: gym_member
+#: code:addons/gym_member/models/gym_notification.py:80
+#, python-format
+msgid "Membership Expiring Soon"
+msgstr "انتهاء العضوية وشيك"
+
+#. module: gym_member
+#: code:addons/gym_member/models/gym_notification.py:81
+#, python-format
+msgid "Dear %s,<br/>Your membership will expire on %s. Please renew to continue enjoying our services."
+msgstr "عزيزي %s،<br/>ستنتهي عضويتك في %s. يرجى التجديد للاستمرار في الاستمتاع بخدماتنا."
+
+#. module: gym_member
+#: code:addons/gym_member/wizards/bulk_email_wizard.py:46
+#, python-format
+msgid "Emails Sent"
+msgstr "تم إرسال البريد الإلكتروني"
+
+#. module: gym_member
+#: code:addons/gym_member/wizards/bulk_email_wizard.py:47
+#, python-format
+msgid "Sent %s emails successfully!"
+msgstr "تم إرسال %s بريد إلكتروني بنجاح!"

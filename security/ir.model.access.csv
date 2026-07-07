@@ -1,0 +1,11 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_gym_membership_user,gym.membership.user,model_gym_membership,base.group_user,1,1,1,1
+access_gym_membership_manager,gym.membership.manager,model_gym_membership,base.group_system,1,1,1,1
+access_gym_payment_user,gym.payment.user,model_gym_payment,base.group_user,1,1,1,1
+access_gym_payment_manager,gym.payment.manager,model_gym_payment,base.group_system,1,1,1,1
+access_gym_attendance_user,gym.attendance.user,model_gym_attendance,base.group_user,1,1,1,1
+access_gym_class_user,gym.class.user,model_gym_class,base.group_user,1,1,1,1
+access_gym_notification_user,gym.notification.user,model_gym_notification,base.group_user,1,1,1,1
+access_gym_attendance_manager,gym.attendance.manager,model_gym_attendance,base.group_system,1,1,1,1
+access_gym_class_manager,gym.class.manager,model_gym_class,base.group_system,1,1,1,1
+access_gym_notification_manager,gym.notification.manager,model_gym_notification,base.group_system,1,1,1,1

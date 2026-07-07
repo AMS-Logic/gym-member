@@ -1,0 +1,44 @@
+<!--
+    Copyright (C) 2026 AMS Logic
+    License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
+-->
+<odoo>
+    <data noupdate="1">
+        <!-- Demo Classes -->
+        <record id="demo_class_yoga" model="gym.class">
+            <field name="name">Morning Yoga Flow</field>
+            <field name="description">Start your day with energizing yoga poses</field>
+            <field name="instructor">Sarah Johnson</field>
+            <field name="capacity">15</field>
+            <field name="class_type">yoga</field>
+            <field name="schedule">morning</field>
+            <field name="days_of_week">monday</field>
+            <field name="start_time">7.0</field>
+            <field name="duration">1.0</field>
+        </record>
+
+        <record id="demo_class_spinning" model="gym.class">
+            <field name="name">High Energy Spinning</field>
+            <field name="description">Intense cardio workout on stationary bikes</field>
+            <field name="instructor">Mike Thompson</field>
+            <field name="capacity">20</field>
+            <field name="class_type">spinning</field>
+            <field name="schedule">evening</field>
+            <field name="days_of_week">wednesday</field>
+            <field name="start_time">18.0</field>
+            <field name="duration">0.75</field>
+        </record>
+
+        <record id="demo_class_zumba" model="gym.class">
+            <field name="name">Zumba Dance Fitness</field>
+            <field name="description">Fun dance workout with Latin music</field>
+            <field name="instructor">Maria Garcia</field>
+            <field name="capacity">25</field>
+            <field name="class_type">zumba</field>
+            <field name="schedule">midday</field>
+            <field name="days_of_week">friday</field>
+            <field name="start_time">12.0</field>
+            <field name="duration">1.0</field>
+        </record>
+    </data>
+</odoo>

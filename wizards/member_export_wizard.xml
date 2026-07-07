@@ -1,0 +1,23 @@
+<!--
+    Copyright (C) 2026 AMS Logic
+    License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
+-->
+<odoo>
+    <record id="view_member_export_wizard" model="ir.ui.view">
+        <field name="name">member.export.wizard.form</field>
+        <field name="model">member.export.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Export Members">
+                <group>
+                    <field name="export_format"/>
+                    <field name="include_inactive"/>
+                    <field name="membership_type_filter"/>
+                </group>
+                <footer>
+                    <button name="action_export" string="Export" type="object" class="btn-primary"/>
+                    <button string="Cancel" class="btn-default" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

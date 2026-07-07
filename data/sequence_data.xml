@@ -1,0 +1,15 @@
+<!--
+    Copyright (C) 2026 AMS Logic
+    License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
+-->
+<odoo>
+    <data noupdate="1">
+        <record id="seq_gym_payment" model="ir.sequence">
+            <field name="name">Gym Payment Sequence</field>
+            <field name="code">gym.payment</field>
+            <field name="prefix">PAY/%(year)s/</field>
+            <field name="padding">5</field>
+            <field name="company_id" eval="False"/>
+        </record>
+    </data>
+</odoo>

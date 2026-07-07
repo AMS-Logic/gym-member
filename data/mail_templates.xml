@@ -1,0 +1,59 @@
+<!--
+    Copyright (C) 2026 AMS Logic
+    License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
+-->
+<odoo>
+    <data noupdate="1">
+        <record id="email_template_notification" model="mail.template">
+            <field name="name">Gym Notification Email</field>
+            <field name="model_id" ref="model_gym_notification"/>
+            <field name="email_from">${object.env.user.email_formatted}</field>
+            <field name="subject">${object.subject}</field>
+            <field name="body_html">${object.body}</field>
+            <field name="auto_delete">True</field>
+        </record>
+
+        <record id="email_template_welcome" model="mail.template">
+            <field name="name">Welcome Email</field>
+            <field name="model_id" ref="model_gym_membership"/>
+            <field name="email_from">${object.env.user.email_formatted}</field>
+            <field name="subject">Welcome to Our Gym!</field>
+            <field name="body_html">
+                <![CDATA[
+                <div>
+                    <h2>Welcome ${object.name}!</h2>
+                    <p>Thank you for joining our gym. Your membership has been activated.</p>
+                    <p><strong>Membership Details:</strong></p>
+                    <ul>
+                        <li>Type: ${object.membership_type}</li>
+                        <li>Start Date: ${object.start_date}</li>
+                        <li>End Date: ${object.end_date}</li>
+                    </ul>
+                    <p>We look forward to helping you achieve your fitness goals!</p>
+                </div>
+                ]]>
+            </field>
+            <field name="auto_delete">True</field>
+        </record>
+
+        <!-- Expiry notification template -->
+        <record id="email_template_expiry" model="mail.template">
+            <field name="name">Membership Expiry Notification</field>
+            <field name="model_id" ref="model_gym_membership"/>
+            <field name="email_from">${object.env.user.email_formatted}</field>
+            <field name="subject">Membership Expiring Soon</field>
+            <field name="body_html">
+                <![CDATA[
+                <div>
+                    <p>Dear ${object.name},</p>
+                    <p>Your gym membership will expire on <strong>${object.end_date}</strong>.</p>
+                    <p>Please renew your membership to continue enjoying our services.</p>
+                    <p>If you have any questions, contact our front desk.</p>
+                    <p>Thank you!</p>
+                </div>
+                ]]>
+            </field>
+            <field name="auto_delete">True</field>
+        </record>
+    </data>
+</odoo>

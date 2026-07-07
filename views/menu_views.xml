@@ -1,0 +1,57 @@
+<!--
+    Copyright (C) 2026 AMS Logic
+    License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
+-->
+<odoo>
+    <menuitem id="menu_gym_root"
+              name="Gym Management"
+              sequence="10"
+              web_icon="gym_member,static/description/icon.png"/>
+    <menuitem id="menu_gym_members_operations"
+              name="Members"
+              parent="menu_gym_root"
+              sequence="10"/>
+    <menuitem id="menu_gym_membership"
+              name="All Members"
+              parent="menu_gym_members_operations"
+              action="action_gym_membership"
+              sequence="10"/>
+    <menuitem id="menu_gym_attendance"
+              name="Attendance Logs"
+              parent="menu_gym_members_operations"
+              action="action_gym_attendance"
+              sequence="20"/>
+    <menuitem id="menu_gym_class"
+              name="Gym Classes"
+              parent="menu_gym_members_operations"
+              action="action_gym_class"
+              sequence="30"/>
+    <menuitem id="menu_gym_financial"
+              name="Financial"
+              parent="menu_gym_root"
+              sequence="20"/>
+    <menuitem id="menu_gym_payment"
+              name="Payments"
+              parent="menu_gym_financial"
+              action="action_gym_payment"
+              sequence="10"/>
+    <menuitem id="menu_gym_reports"
+              name="Reports"
+              parent="menu_gym_root"
+              sequence="30"/>
+    <menuitem id="menu_gym_member_report"
+              name="Member Reports"
+              parent="menu_gym_reports"
+              action="action_member_report"
+              sequence="10"/>
+    <menuitem id="menu_gym_payment_report"
+              name="Payment Reports"
+              parent="menu_gym_reports"
+              action="action_payment_report"
+              sequence="20"/>
+    <menuitem id="menu_gym_configuration"
+              name="Configuration"
+              parent="menu_gym_root"
+              sequence="100"
+              groups="base.group_system"/>
+</odoo>

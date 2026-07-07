@@ -1,0 +1,100 @@
+<!--
+    Copyright (C) 2026 AMS Logic
+    License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
+-->
+<odoo>
+    <record id="view_gym_payment_list" model="ir.ui.view">
+        <field name="name">gym.payment.list</field>
+        <field name="model">gym.payment</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="payment_reference"/>
+                <field name="member_name"/>
+                <field name="payment_date"/>
+                <field name="amount" sum="Total"/>
+                <field name="payment_method"/>
+                <field name="state" widget="badge"/>
+            </list>
+        </field>
+    </record>
+    <record id="view_gym_payment_form" model="ir.ui.view">
+        <field name="name">gym.payment.form</field>
+        <field name="model">gym.payment</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_confirm" type="object"
+                                class="btn_primary"
+                                invisible="state != 'draft'"
+                                string="Confirm Payment"/>
+                        <button name="action_cancel" type="object"
+                                class="btn-danger"
+                                invisible="state != 'confirmed'"
+                                string="Cancel Payment"/>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="payment_reference"/>
+                            <field name="membership_id" options="{'no_create': True}"/>
+                            <field name="member_name"/>
+                        </group>
+                        <group>
+                            <field name="amount"/>
+                            <field name="payment_date"/>
+                            <field name="payment_method"/>
+                            <field name="state"/>
+                        </group>
+                    </group>
+                    <field name="notes" placeholder="Additional payment notes..."/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="view_gym_payment_search" model="ir.ui.view">
+        <field name="name">gym.payment.search</field>
+        <field name="model">gym.payment</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="payment_reference"/>
+                <field name="member_name"/>
+                <field name="amount"/>
+                <filter name="confirmed" string="Confirmed" domain="[('state','=','confirmed')]"/>
+                <filter name="draft" string="Draft" domain="[('state','=','draft')]"/>
+                <filter name="cancelled" string="Cancelled" domain="[('state','=','cancelled')]"/>
+            </search>
+        </field>
+    </record>
+    <record id="view_gym_payment_pivot" model="ir.ui.view">
+        <field name="name">gym.payment.pivot</field>
+        <field name="model">gym.payment</field>
+        <field name="arch" type="xml">
+            <pivot>
+                <field name="payment_method" type="row"/>
+                <field name="payment_date" interval="month" type="col"/>
+                <field name="amount" type="measure" operator="sum"/>
+            </pivot>
+        </field>
+    </record>
+    <record id="view_gym_payment_graph" model="ir.ui.view">
+        <field name="name">gym.payment.graph</field>
+        <field name="model">gym.payment</field>
+        <field name="arch" type="xml">
+            <graph string="Payment Revenue">
+                <field name="payment_date" interval="month" type="row"/>
+                <field name="payment_method" type="col"/>
+                <field name="amount" type="measure" operator="sum"/>
+            </graph>
+        </field>
+    </record>
+    <record id="action_gym_payment" model="ir.actions.act_window">
+        <field name="name">Payments</field>
+        <field name="res_model">gym.payment</field>
+        <field name="view_mode">list,form,pivot,graph</field>
+        <field name="search_view_id" ref="view_gym_payment_search"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">Record your first payment!</p>
+            <p>Track all membership payments, view payment history, and manage financial records.</p>
+        </field>
+    </record>
+</odoo>

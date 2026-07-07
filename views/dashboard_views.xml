@@ -1,0 +1,69 @@
+<!--
+    Copyright (C) 2026 AMS Logic
+    License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
+-->
+<odoo>
+    <record id="view_gym_dashboard" model="ir.ui.view">
+        <field name="name">gym.dashboard</field>
+        <field name="model">gym.membership</field>
+        <field name="arch" type="xml">
+            <board>
+                <column>
+                    <!-- KPI Cards -->
+                    <card title="Total Members" class="o_dashboard_card">
+                        <field name="member_count"/>
+                    </card>
+
+                    <card title="Active Members" class="o_dashboard_card">
+                        <field name="active_members_count"/>
+                    </card>
+
+                    <card title="Revenue This Month" class="o_dashboard_card">
+                        <field name="monthly_revenue"/>
+                    </card>
+
+                    <card title="Today's Attendance" class="o_dashboard_card">
+                        <field name="today_attendance"/>
+                    </card>
+
+                    <graph title="Membership Growth" type="pivot">
+                        <field name="create_date" interval="month"/>
+                        <field name="__count__" type="measure"/>
+                    </graph>
+
+                    <graph title="Revenue by Membership Type" type="bar">
+                        <field name="membership_type"/>
+                        <field name="payment_amount" type="measure"/>
+                    </graph>
+                </column>
+
+                <column>
+                    <graph title="Class Popularity" type="pie">
+                        <field name="class_type"/>
+                        <field name="enrolled_count" type="measure"/>
+                    </graph>
+
+                    <graph title="Attendance by Location" type="bar">
+                        <field name="location"/>
+                        <field name="duration" type="measure"/>
+                    </graph>
+
+                    <graph title="Payment Methods" type="pie">
+                        <field name="payment_method"/>
+                        <field name="amount" type="measure"/>
+                    </graph>
+                </column>
+            </board>
+        </field>
+    </record>
+
+    <record id="action_gym_dashboard" model="ir.actions.act_window">
+        <field name="name">Dashboard</field>
+        <field name="res_model">gym.membership</field>
+        <field name="view_mode">board</field>
+        <field name="view_id" ref="view_gym_dashboard"/>
+        <field name="help" type="html">
+            <p>View key performance indicators and analytics for your gym business.</p>
+        </field>
+    </record>
+</odoo>

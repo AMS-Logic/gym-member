@@ -1,0 +1,59 @@
+<!--
+    Copyright (C) 2026 AMS Logic
+    License LGPL-3.0 or later (http://www.gnu.org/licenses/lgpl.html).
+-->
+<odoo>
+    <report id="report_member_list"
+            model="gym.membership"
+            string="Member List Report"
+            report_type="qweb-pdf"
+            name="gym_member.report_member_list_template"
+            file="gym_member.report_member_list_template"
+            attachment_use="False"/>
+    <template id="report_member_list_template">
+        <t t-call="web.html_container">
+            <div class="page">
+                <div class="oe_structure"/>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>Gym Members Report</h2>
+                        <p>Generated on: <span t-esc="datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')"/></p>
+                        <p><strong>Total Members:</strong> <span t-esc="len(docs)"/></p>
+                        <p><strong>Active Members:</strong> <span t-esc="len([m for m in docs if m.is_active])"/></p>
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Member Name</th>
+                                    <th>Membership Type</th>
+                                    <th>Start Date</th>
+                                    <th>End Date</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-foreach="docs" t-as="member">
+                                    <tr>
+                                        <td><span t-esc="member.name"/></td>
+                                        <td><span t-esc="member.membership_type"/></td>
+                                        <td><span t-esc="member.start_date"/></td>
+                                        <td><span t-esc="member.end_date or 'N/A'"/></td>
+                                        <td><span t-esc="'Active' if member.is_active else 'Inactive'"/></td>
+                                    </tr>
+                                </t>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+    <record id="action_member_report" model="ir.actions.act_window">
+        <field name="name">Member Report</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">gym.membership</field>
+        <field name="view_mode">list,form,pivot,graph</field>
+        <field name="help" type="html">
+            <p>Generate and print member reports.</p>
+        </field>
+    </record>
+</odoo>
